@@ -1,0 +1,46 @@
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+        <script>
+            function say()
+            {
+                var text = document.getElementById('input').value;
+                showInput(text)
+                //前端需要用 window.webkit.messageHandlers.注册的方法名.postMessage({body:传输的数据} 来给native发送消息
+                window.webkit.messageHandlers.sayhello.postMessage({body: text});
+            }
+            function showAlert(text)
+            {
+              alert(text);
+            }
+
+      
+
+        </script>
+
+        <style>
+            div{
+                height: 20px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1 id="head">hello world</h1>
+        <p id="p2">hello world</p>
+        <div><button onclick="say()">say hello</button></div>
+        <div></div>
+        <div><input id="input" style={top:10}></input></div>
+        <div></div>
+        <button onclick="showAlert()" style="backgroudColor:'red'">showAlert</button>
+        <div></div>
+        <button onclick="native.myLog('123456');">调用OC中myLog方法</button>
+        
+        <div>
+        <img src="https://vd3.bdstatic.com/mda-iiswzz76bp1vyrcq/mda-iiswzz76bp1vyrcq.jpg"  height="250" width="400px"/>
+        </div>
+        
+    </body>

@@ -1,0 +1,22 @@
+PODS:
+  - JWNetAutoCache (0.0.2)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+
+DEPENDENCIES:
+  - JWNetAutoCache
+  - SDWebImage
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - JWNetAutoCache
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  JWNetAutoCache: 434f10855da06d29a381359552ae9d27ef35cad7
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+
+PODFILE CHECKSUM: 908b8f6c9cc70404a07a310222037c513ba80cf9
+
+COCOAPODS: 1.5.0
